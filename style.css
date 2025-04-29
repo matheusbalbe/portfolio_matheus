@@ -37,6 +37,13 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 /* Hero */
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ensures the hero section takes full viewport height */
+  text-align: center; /* Centers text content horizontally */
+}
 .hero-content {
     display: flex;
     justify-content: center;
@@ -89,10 +96,101 @@ nav ul li a {
     border-radius: 8px;
     /* text-decoration: none; */
     font-weight: 600;
-margin-top: 6vh;
-font-family: "Libre Franklin", sans-serif;
+    margin-top: 6vh;
+    
+    font-family: "Libre Franklin", sans-serif;
     /* transition: background-color 0.3s ease; */
 }
+
+/* Seção sobre mim */
+/* Seção "Sobre Mim" */
+.sobre-mim {
+  background-color: #121214;
+  color: white;
+  padding: 60px 20px;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Para o efeito de imagem de fundo */
+  text-align: center; /* Centraliza o texto */
+  margin-top: 20vh; /* Espaço acima da seção */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+}
+
+/* Imagem de fundo com efeito */
+.sobre-mim::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('assets/sobre-mim/fundo-imagem.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* Container principal */
+.sobre-mim-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Título e texto */
+.sobre-mim-texto {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+}
+
+.sobre-mim-titulo {
+  font-size: 32px;
+  color: #9d4edd;
+  border-bottom: 2px solid #9d4edd;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+}
+
+.sobre-mim-texto h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.sobre-mim-texto p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+/* Botão de contato */
+.btn-contato {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #9d4edd;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.btn-contato:hover {
+  background-color: #7a3bb6;
+}
+
+/* Imagem*
+
+
 
 /* Seção meus conhecimentos */
 
@@ -124,7 +222,7 @@ font-family: "Libre Franklin", sans-serif;
     row-gap: 30px; /* ou o valor que preferir */
     column-gap: 80px;
     
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
   }
   
@@ -176,5 +274,175 @@ font-family: "Libre Franklin", sans-serif;
     transform: rotateY(180deg);
     font-size: 1rem;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
   }
   
+  .flip-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10px;
+  }
+  
+  .flip-title {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .flip-description {
+    font-weight: 300;
+    font-size: 0.7rem;
+  }
+  
+  
+  
+  /* Seção de Meus projetos */
+/* Seção de Meus projetos */
+/* Estilo básico dos projetos */
+.projetos {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #121214;
+  color: white;
+}
+
+.projetos-titulo {
+  font-size: 28px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #9d4edd;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.projetos-card {
+  background-color: #1f1f1f;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border 0.3s, transform 0.3s;
+  cursor: pointer;
+  width: 80%;
+}
+
+.projetos-card:hover {
+  border-color: #9d4edd;
+  transform: scale(1.02);
+}
+
+.projetos-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  object-position: top;
+}
+
+.projetos-info {
+  padding: 16px;
+  text-align: center;
+}
+
+.projetos-info h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.projetos-tecnologias {
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* Estilo do modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000; /* Fica em cima de outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
+}
+
+.modal-content {
+  background-color: #1f1f1f;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 900px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+/* Imagem do modal */
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-image {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Texto dentro do modal */
+.modal-text {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+/* Rodapé do modal com botões */
+.modal-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  background-color: #9d4edd;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #7a3bb6;
+}
+
+/* Fechar botão */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ff0000;
+}
