@@ -7,31 +7,44 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" href="assets/favicon.jpeg" type="image/x-icon">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <body>
 <header>
     <nav>
+      <a href="#home" class="logo">
+        <img src="assets/logoMB.svg" alt="Logo Matheus Balbe" />
+      </a>
         <ul>
             <li><a href="#sobre">Sobre mim</a></li>
             <li><a href="#projetos">Habilidades</a></li>
             <li><a href="#contato">Projetos</a></li>
             <li><a href="#contato">Contato</a></li>
         </ul>
+        <div class="theme-switch-container">
+          <input type="checkbox" id="theme-switcher" class="theme-switch" />
+          <label for="theme-switcher" class="theme-switch-label">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+          </label>
+        </div>
     </nav>
 </header>
-<section id="hero">
+<!-- Seção Hero -->
+<section class="hero">
+  <div class="hero-container">
     <div class="hero-content">
-        <div class="hero-text">
-        <h1>Olá, meu nome é</h1>
-        <h1 id="heroH1name"></h1>
-        <h3>Desenvolvedor Full Stack</h3>
-        <button class="btn Contato">Entrar em contato</button>
+      <h1>Desenvolvedor Web Freelancer <br>em Belo Horizonte</h1>
+      <p>Especialista em criar soluções web que combinam design incrível com performance e funcionalidade.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Entrar em contato</a>
+        <a href="#portfolio" class="btn-secondary">Ver meus projetos</a>
+      </div>
     </div>
-    <div class="hero-image">
-        <img src="assets/grupo_foto.svg" alt="Imagem de Matheus Balbe">
-    </div>
+  </div>
 </section>
 <section class="sobre-mim">
   
@@ -46,7 +59,7 @@
     </div>
 
     <div class="sobre-mim-imagem">
-      <img src="assets/sobre-mim/imagem-perfil.jpg" alt="Matheus Balbe" />
+      <img src="assets/grupo_foto.svg" alt="Matheus Balbe" />
     </div>
   </div>
 </section>
@@ -285,6 +298,40 @@
       </div>
     </div>
   </section>
+  <section class="contato">
+    <h2 class="contato-titulo">Entre em Contato</h2>
+    <p class="contato-descricao">Entre em contato comigo e vamos desenvolver sua ideia!</p>
+    <div class="contato-social">
+      <div class="social-links">
+        <a href="https://wa.me/5531983938418" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/in/matheusbalbe" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/matheusbalbe" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/matheus.balbe" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+
+      </div>
+    </div>
+    <div class="contato-container">
+      <div class="contato-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Minha localização</h3>
+        <p>Belo Horizonte - MG, Brasil</p>
+      </div>
+      <div class="contato-item">
+        <i class="fab fa-whatsapp"></i>
+        <h3>Me mande uma mensagem</h3>
+        <p><a href="tel:+5584988147799">(31) 98393-8418</a></p>
+      </div>
+      <div class="contato-item">
+        <i class="fas fa-envelope"></i>
+        <h3>Nos Envie um E-mail</h3>
+        <p><a href="mailto:matheusbalbe@gmail.com">matheusbalbe@gmail.com</a></p>
+      </div>
+    </div>
+
+  </section>
+  
+  
+  
 </body>
 <script src="script.js"></script>
 </html>
