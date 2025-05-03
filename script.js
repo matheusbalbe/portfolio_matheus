@@ -16,36 +16,36 @@ toggle.addEventListener("click", () => {
   nav.classList.toggle("show");
 });
 
-// Pega o checkbox do switch de tema
-const themeSwitch = document.getElementById("theme-switcher");
-const projetosinfo = document.querySelector(".sobre-mim");
-// Verifica se o tema escuro foi armazenado previamente no localStorage
-if (localStorage.getItem("theme") === "dark") {
-  document.body.classList.add("dark-theme");
-  document.body.classList.remove("light-theme");
-  themeSwitch.checked = true; // Marca o switch no modo escuro
-} else {
-  document.body.classList.add("light-theme");
-  document.body.classList.remove("dark-theme");
-  themeSwitch.checked = false; // Desmarca o switch no modo claro
-}
+// // Pega o checkbox do switch de tema
+// const themeSwitch = document.getElementById("theme-switcher");
+// const projetosinfo = document.querySelector(".sobre-mim");
+// // Verifica se o tema escuro foi armazenado previamente no localStorage
+// if (localStorage.getItem("theme") === "dark") {
+//   document.body.classList.add("dark-theme");
+//   document.body.classList.remove("light-theme");
+//   themeSwitch.checked = true; // Marca o switch no modo escuro
+// } else {
+//   document.body.classList.add("light-theme");
+//   document.body.classList.remove("dark-theme");
+//   themeSwitch.checked = false; // Desmarca o switch no modo claro
+// }
 
-// Adiciona o evento de mudança no checkbox para alternar entre os temas
-themeSwitch.addEventListener("change", () => {
-  if (themeSwitch.checked) {
-    document.body.classList.add("dark-theme");
-    projetosinfo.classList.add("dark-theme");
-    projetosinfo.classList.remove("light-theme");
-    document.body.classList.remove("light-theme");
-    localStorage.setItem("theme", "dark"); // Salva no localStorage a escolha do tema escuro
-  } else {
-    document.body.classList.add("light-theme");
-    projetosinfo.classList.add("light-theme");
-    projetosinfo.classList.remove("dark-theme");
-    document.body.classList.remove("dark-theme");
-    localStorage.setItem("theme", "light"); // Salva no localStorage a escolha do tema claro
-  }
-});
+// // Adiciona o evento de mudança no checkbox para alternar entre os temas
+// themeSwitch.addEventListener("change", () => {
+//   if (themeSwitch.checked) {
+//     document.body.classList.add("dark-theme");
+//     projetosinfo.classList.add("dark-theme");
+//     projetosinfo.classList.remove("light-theme");
+//     document.body.classList.remove("light-theme");
+//     localStorage.setItem("theme", "dark"); // Salva no localStorage a escolha do tema escuro
+//   } else {
+//     document.body.classList.add("light-theme");
+//     projetosinfo.classList.add("light-theme");
+//     projetosinfo.classList.remove("dark-theme");
+//     document.body.classList.remove("dark-theme");
+//     localStorage.setItem("theme", "light"); // Salva no localStorage a escolha do tema claro
+//   }
+// });
 
 const text = "Matheus Balbe";
 const heroH1name = document.getElementById("heroH1name");
