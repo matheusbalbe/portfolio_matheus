@@ -1,3 +1,21 @@
+// Função para monitorar a rolagem
+window.onscroll = function () {
+  const header = document.querySelector("header");
+  // Verifica se a rolagem passou de 50px
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled"); // Adiciona a classe quando rolar
+  } else {
+    header.classList.remove("scrolled"); // Remove a classe quando voltar ao topo
+  }
+};
+
+const toggle = document.getElementById("menu-toggle");
+const nav = document.querySelector("nav");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("show");
+});
+
 // Pega o checkbox do switch de tema
 const themeSwitch = document.getElementById("theme-switcher");
 const projetosinfo = document.querySelector(".sobre-mim");
@@ -28,17 +46,6 @@ themeSwitch.addEventListener("change", () => {
     localStorage.setItem("theme", "light"); // Salva no localStorage a escolha do tema claro
   }
 });
-
-// Função para monitorar a rolagem
-window.onscroll = function () {
-  const header = document.querySelector("header");
-  // Verifica se a rolagem passou de 50px
-  if (window.scrollY > 50) {
-    header.classList.add("scrolled"); // Adiciona a classe quando rolar
-  } else {
-    header.classList.remove("scrolled"); // Remove a classe quando voltar ao topo
-  }
-};
 
 const text = "Matheus Balbe";
 const heroH1name = document.getElementById("heroH1name");

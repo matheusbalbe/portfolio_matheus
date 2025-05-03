@@ -6,7 +6,7 @@
     <title>Portfólio Matheus</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" href="assets/favicon.jpeg" type="image/x-icon">
+    <link rel="icon" href="assets/simbolo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -17,23 +17,27 @@
   <a href="#home" class="logo">
         <img src="assets/logoMB.svg" alt="Logo Matheus Balbe" />
       </a>
-
-    <nav>
-      <ul>
-            <li><a href="#sobre">Sobre mim</a></li>
-            <li><a href="#projetos">Habilidades</a></li>
-            <li><a href="#contato">Projetos</a></li>
-            <li><a href="#contato">Contato</a></li>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="#sobre-mim">Sobre mim</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
-        
-    </nav>
-    <div class="theme-switch-container">
+      </nav>
+    <!-- <div class="theme-switch-container">
       <input type="checkbox" id="theme-switcher" class="theme-switch" />
       <label for="theme-switcher" class="theme-switch-label">
         <span class="icon-sun">☀️</span>
         <span class="icon-moon">🌙</span>
       </label>
-    </div>
+    </div> -->
 </header>
 <!-- Seção Hero -->
 <section class="hero">
@@ -42,8 +46,8 @@
       <h1>Desenvolvedor Web Freelancer <br>em Belo Horizonte</h1>
       <p>Especialista em criar soluções web que combinam design incrível com performance e funcionalidade.</p>
       <div class="hero-buttons">
-        <a href="#contact" class="btn-primary">Entrar em contato</a>
-        <a href="#portfolio" class="btn-secondary">Ver meus projetos</a>
+        <a href="https://wa.me/5531983938418" target="_blank" class="btn-primary"><i class="fab fa-whatsapp"></i> Entrar em contato</a>
+        <a href="#projetos" class="btn-secondary"><i class="fas fa-folder-open"></i> Ver meus projetos</a>
       </div>
     </div>
   </div>
@@ -74,26 +78,31 @@
 </section>
 
 
-<section class="sobre-mim">
+<section id="sobre-mim" class="sobre-mim">
   
   <div class="sobre-mim-container">
     <div class="sobre-mim-texto">
       <h2 class="projetos-titulo">Sobre mim</h2>
+      <div class="sobre-mim-imagem-mobile">
+        <img src="assets/grupo_foto.svg" alt="Matheus Balbe" />
+      </div>
       <p>
         Me chamo Matheus Balbe, sou um ex-militar desenvolvedor Full Stack com experiência em backend e frontend de sistemas Web. Meu foco está em criar soluções funcionais, intuitivas e agradáveis, sempre priorizando a usabilidade e o design. Trabalho com tecnologias como Laravel (PHP) e Node.js (JavaScript), e minhas habilidades incluem o desenvolvimento backend, com Laravel e Node.js, além de frontend utilizando JavaScript, React, HTML e CSS.
       <br>
       <br>
-        <a href="#contato" class="btn-contato">Vamos Conversar!</a>
+      <div class="hero-buttons" style="justify-content: left;">
+      <a href="https://wa.me/5531983938418" target="_blank" class="btn-primary"><i class="fab fa-whatsapp"></i> Entrar em contato</a>
+      </div>
     </div>
 
-    <div class="sobre-mim-imagem">
+    <div class="sobre-mim-imagem-desktop">
       <img src="assets/grupo_foto.svg" alt="Matheus Balbe" />
     </div>
   </div>
 </section>
 
 
-<section class="conhecimentos">
+<section id="habilidades" class="conhecimentos">
     <h2 class="projetos-titulo">Habilidades</h2>
     <p>Passe o cursor do mouse no card para mais detalhes*</p>
     <div class="grid">
@@ -240,7 +249,7 @@
     
   </section>
 
-  <section class="projetos">
+  <section id="projetos" class="projetos">
     <h2 class="projetos-titulo">Todos os projetos</h2>
     <div class="projetos-grid">
      
@@ -300,7 +309,7 @@
         <img src="assets/projetos/clickapp/clickapp3.jpg" alt="DoWhile 2021 Virtual Badge" />
         <div class="projetos-info">
           <h3>Sistema de pedidos para restaurantes</h3>
-          <div class="projetos-tecnologias">PHP | Laravel | JS | MySQL |🔗</div>
+          <div class="projetos-tecnologias">NodeJS | JS | EJS | MySQL | 🔗</div>
         </div>
       </div>
       <div class="projetos-card">
@@ -326,7 +335,7 @@
       </div>
     </div>
   </section>
-  <section class="contato">
+  <section id="contato" class="contato">
     <h2 class="contato-titulo">Entre em Contato</h2>
     <p class="contato-descricao">Entre em contato comigo e vamos desenvolver sua ideia!</p>
     <div class="contato-social">
@@ -351,7 +360,7 @@
       </div>
       <div class="contato-item">
         <i class="fas fa-envelope"></i>
-        <h3>Nos Envie um E-mail</h3>
+        <h3>Me envie um e-mail</h3>
         <p><a href="mailto:matheusbalbe@gmail.com">matheusbalbe@gmail.com</a></p>
       </div>
     </div>

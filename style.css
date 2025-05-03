@@ -127,7 +127,7 @@ header {
   top: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between; /* Distribui os elementos com espaço entre eles */
+  /* justify-content: space-between; */
   align-items: center; /* Alinha os elementos verticalmente ao centro */
   border-bottom: 2px solid #7E45D5;
   background-color: transparent;
@@ -144,7 +144,7 @@ header.scrolled {
   height: 3vw; /* Usando vw (view width) para tornar a logo responsiva */
   /* display: block; */
   /* margin: 0 auto;  */
-  margin-left: 15vw;
+  margin-left: 17vw;
 }
 
 /* Navegação */
@@ -154,6 +154,8 @@ nav ul {
   margin: 0;
   display: flex;
   justify-content: center;
+  margin-left: 6vw;
+  align-items: center;
   gap: .1vw;  /* Ajuste responsivo baseado na largura da tela */
   align-items: center;
   width: 100%;
@@ -175,7 +177,7 @@ nav ul li a {
 }
 
 /* Botão de switch (toggle) */
-.theme-switch-container {
+/* .theme-switch-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,7 +185,7 @@ nav ul li a {
 }
 
 .theme-switch {
-  display: none; /* Esconde o checkbox */
+  display: none; 
 }
 
 .theme-switch-label {
@@ -192,7 +194,7 @@ nav ul li a {
   justify-content: space-between;
   background-color: var(--button-background-light);
   border-radius: 50px;
-  width: 3.5vw;  /* Usando largura responsiva para ajustar o tamanho */
+  width: 3.5vw; 
   height: 0.9vw;
   padding: 0.5vw;
   cursor: pointer;
@@ -201,7 +203,7 @@ nav ul li a {
 }
 
 .theme-switch-label .icon-sun, .theme-switch-label .icon-moon {
-  font-size: 1vw;  /* Ajustando o tamanho dos ícones com base na tela */
+  font-size: 1vw; 
   color: white;
   position: absolute;
   top: 50%;
@@ -218,7 +220,7 @@ nav ul li a {
 }
 
 .theme-switch:checked + .theme-switch-label {
-  background-color: var(--button-background-dark); /* Cor de fundo roxa ao ativar */
+  background-color: var(--button-background-dark); 
 }
 
 .theme-switch:checked + .theme-switch-label .icon-sun {
@@ -228,7 +230,7 @@ nav ul li a {
 .theme-switch:checked + .theme-switch-label .icon-moon {
   transform: translateY(-50%) translateX(-2.5vw);
 }
-
+ */
 
 
 
@@ -451,13 +453,15 @@ nav ul li a {
   color: #ccc;
 }
 
-.sobre-mim-imagem img {
+.sobre-mim-imagem-desktop img {
   flex: 1;
   margin-left: 70px;
   max-width: 300px;
   text-align: center;
 }
-
+.sobre-mim-imagem-mobile img {
+  display: none;
+}
 /* Botão de contato */
 .btn-contato {
   display: inline-block;
@@ -818,4 +822,152 @@ nav ul li a {
   font-size: 22px;
   color: #fff;
   margin-bottom: 20px;
+}
+/* Estilo para design mobile */
+@media (max-width: 768px) {
+
+  header {
+    width: 90%;
+    justify-content: space-between;
+    height: 10%;
+  }
+
+  .logo img {
+    height: 12vw; /* Usando vw (view width) para tornar a logo responsiva */
+    /* display: block; */
+    /* margin: 0 auto;  */
+    margin-left: 7vw;
+  }
+  /* Ajuste do cabeçalho */
+  nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 1rem;
+    background: #1e0a45;
+    border: 1px solid #7F4BDB;
+    border-radius: 8px;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  nav.show {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  nav.show ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  nav.show li a{
+font-size: 13px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 40px;
+    /* margi */
+    border: 1px solid #7F4BDB;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+  }
+
+  .menu-toggle:hover {
+    background: rgba(127, 75, 219, 0.1);
+  }
+
+  .menu-toggle span {
+    height: 7px;
+    background: #A78BFA;
+    border-radius: 2px;
+    margin: 3px 0;
+  }
+
+  /* Ajuste da seção Hero */
+  .hero {
+    height: auto;
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 6vw;
+  }
+
+  .hero-content p {
+    font-size: 4vw;
+  }
+
+  .hero-buttons a {
+    padding: 10px 20px;
+    font-size: 4vw;
+  }
+
+  /* Ajuste da seção Serviços */
+  .servicos-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .servico-card {
+    width: 100%;
+  }
+
+  /* Ajuste da seção Sobre Mim */
+  .sobre-mim-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .sobre-mim-imagem-desktop img {
+    display: none;
+  }
+  .sobre-mim-imagem-mobile img {
+    /* margin-right: 50px; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* margin: 0 auto; */
+    width: 70%;
+    justify-content: left;
+    align-items: left;
+  }
+
+  /* Ajuste da seção Conhecimentos */
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+  }
+
+  .flip-card {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Ajuste da seção Projetos */
+  .projetos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .projetos-card {
+    width: 100%;
+  }
+
+  /* Ajuste da seção Contato */
+  .contato-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contato-item {
+    width: 100%;
+  }
 }
