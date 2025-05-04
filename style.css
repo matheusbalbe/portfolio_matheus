@@ -838,16 +838,17 @@ nav ul li a {
     font-family: 'Montserrat', sans-serif;
   }
   header {
-    width: 90%;
+    width: 100%;
     justify-content: space-between;
     height: 10%;
+    background-color:#13131F;
   }
 
   .logo img {
     height: 12vw; /* Usando vw (view width) para tornar a logo responsiva */
     /* display: block; */
     /* margin: 0 auto;  */
-    margin-left: 7vw;
+    margin-left: 6vw;
   }
   /* Ajuste do cabeçalho */
   nav {
@@ -858,7 +859,7 @@ nav ul li a {
     background: #1e0a45;
     border: 1px solid #7F4BDB;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 0 0;
     z-index: 1000;
   }
 
@@ -866,15 +867,23 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     width: 100%;
+    /* margin-right: 3vw; */
   }
   nav.show ul {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-left: 0;
   }
   nav.show li a{
-font-size: 13px;
+  font-size: 13px;
   }
+  nav.show li{
+    width: 100%;
+    padding: 1vh 0;
+    text-align: center;
+    border-bottom: 1px solid #7F4BDB;
+    }
 
   .menu-toggle {
     display: flex;
@@ -889,6 +898,7 @@ font-size: 13px;
     cursor: pointer;
     box-sizing: border-box;
     transition: background 0.3s ease;
+    margin-right: 6vw;
   }
 
   .menu-toggle:hover {
@@ -933,27 +943,55 @@ font-size: 13px;
 
   /* Ajuste da seção Sobre Mim */
   .sobre-mim-container {
+    display: flex;
+    margin: 0 auto;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     gap: 20px;
+  }
+  .sobre-mim-texto {
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
   }
   .sobre-mim-imagem-desktop img {
     display: none;
   }
   .sobre-mim-imagem-mobile img {
     /* margin-right: 50px; */
-    text-align: center;
+    /* text-align: center; */
     display: flex;
     flex-direction: column;
     /* margin: 0 auto; */
-    width: 70%;
-    justify-content: left;
-    align-items: left;
+    width:70vw;
+    justify-content: center;
+    /* align-items: left; */
   }
-
+  .sobre-mim-imagem-mobile {
+    /* margin-right: 50px; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+  }
   /* Ajuste da seção Conhecimentos */
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* Define exatamente 2 colunas */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin: 0 auto;
+    padding: 0 20px;
+    column-gap: 20px; /* Espaçamento entre as colunas */
   }
 
   .flip-card {
@@ -972,6 +1010,12 @@ font-size: 13px;
     width: 100%;
   }
 
+  ..flip-description {
+    font-size: 0.2rem;
+  }
+  .flip-back {
+    padding: 0;
+  }
   /* Ajuste da seção Contato */
   .contato-container {
     flex-direction: column;
