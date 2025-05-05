@@ -72,26 +72,25 @@ const modals = document.querySelectorAll(".modal");
 const closeButtons = document.querySelectorAll(".close-btn");
 
 // Função para abrir o modal
-cards.forEach((card) => {
-  card.addEventListener("click", () => {
-    const modalId = card.getAttribute("data-modal");
-    const modal = document.getElementById(modalId);
-    modal.style.display = "block"; // Abre o modal
-  });
-});
+// Função para abrir o modal
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = "block";
+}
 
 // Função para fechar o modal
-closeButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    btn.closest(".modal").style.display = "none"; // Fecha o modal
-  });
-});
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = "none";
+}
 
-// Fechar o modal ao clicar fora da caixa de conteúdo
-window.addEventListener("click", (event) => {
-  modals.forEach((modal) => {
-    if (event.target === modal) {
+// Fecha o modal quando o fundo escuro é clicado
+window.onclick = function(event) {
+  var modals = document.querySelectorAll('.modal');
+  modals.forEach(function(modal) {
+    if (event.target == modal) {
       modal.style.display = "none";
     }
   });
-});
+};
+
+
+
