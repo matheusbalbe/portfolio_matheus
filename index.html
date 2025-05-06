@@ -54,22 +54,22 @@
 <div class="servicos"> 
   <div class="servicos-container">
     <div class="servico-card">
-      <div class="servico-icon">🌐</div>
+      <div class="servico-icon"><i class="fas fa-globe"></i></div>
       <h3>Criação de Sites</h3>
       <p>Desenvolvo sites rápidos, responsivos e modernos para você ou sua empresa.</p>
     </div>
     <div class="servico-card">
-      <div class="servico-icon">💻</div>
+      <div class="servico-icon"><i class="fas fa-laptop-code"></i></div>
       <h3>Desenvolvimento de Sistemas</h3>
       <p>Criação de sistemas personalizados, utilizando as melhores tecnologias para atender suas necessidades.</p>
     </div>
     <div class="servico-card">
-      <div class="servico-icon">🔧</div>
+      <div class="servico-icon"><i class="fas fa-tools"></i></div>
       <h3>Suporte Técnico</h3>
       <p>Ofereço suporte completo para manutenção e melhorias em sistemas e sites já existentes.</p>
     </div>
     <div class="servico-card">
-      <div class="servico-icon">🎨</div> <!-- Ícone de design -->
+      <div class="servico-icon"><i class="fas fa-paint-brush"></i></div>
       <h3>UX Design</h3>
       <p>Criação de interfaces intuitivas e agradáveis, focando na experiência do usuário e na usabilidade dos produtos digitais.</p>
     </div>    
@@ -260,77 +260,322 @@
           <div class="projetos-tecnologias">WordPress | HTML | CSS | JS | 🔗</div>
         </div>
       </div>
-        <!-- Modal do projeto Portal de Emendas MG -->
-    <div id="portal-emendas" class="modal">
-      <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <div class="modal-header">
-          <img class="modal-image" src="assets/projetos/portal de emendas mg/www.emendas.mg.gov.br_.png" alt="Portal de Emendas MG" />
-          <div class="modal-text">
-            <h3>Portal de Emendas MG</h3>
-            <p>O Portal de Emendas MG é uma plataforma para transparência das emendas parlamentares no estado de Minas Gerais. Ele exibe dados detalhados de cada emenda e permite o acompanhamento por parte dos cidadãos.</p>
-          </div>
+    
+<!-- Modal do projeto Portal de Emendas MG -->
+<div id="portal-emendas" class="modal">
+  <div class="modal-content">
+    <span onclick="closeModal('portal-emendas')" class="close-btn">&times;</span>
+    <div class="modal-header">
+      <!-- Carrossel de Imagens -->
+      <div class="carousel-container">
+        <button class="carousel-btn prev-btn">&#10094;</button>
+        <div class="carousel-images">
+          <img class="carousel-image" src="assets/projetos/portal de emendas mg/www.emendas.mg.gov.br_.png" alt="Portal de Emendas MG" />
+          <img class="carousel-image" src="assets/projetos/portal de emendas mg/www.emendas.mg.gov.br_cronograma_.png" alt="Portal de Emendas MG 2" />
+          <img class="carousel-image" src="assets/projetos/portal de emendas mg/www.emendas.mg.gov.br_transparencia_.png" alt="Portal de Emendas MG 3" />
         </div>
-        <div class="modal-footer">
+        <button class="carousel-btn next-btn">&#10095;</button>
+      </div>
+      
+      <!-- Texto do Modal -->
+      <div class="modal-text">
+        <h3>Portal de Emendas MG</h3>
+        <p>O Portal de Emendas MG é uma plataforma para transparência das emendas parlamentares no estado de Minas Gerais. Ele exibe dados detalhados de cada emenda e permite o acompanhamento por parte dos cidadãos.</p>
+            <div class="modal-footer">
           <a href="https://www.emendas.mg.gov.br" class="btn">Acessar projeto</a>
-          <a href="https://github.com/seu-repositorio" class="btn">Acessar repositório</a>
+          <!-- <a href="https://github.com/seu-repositorio" class="btn">Acessar repositório</a> -->
         </div>
       </div>
-    </div>
-      <div class="projetos-card">
+  </div>  
+        </div>
+      </div>
+      <div class="projetos-card" onclick="openModal('mfc-estruturas')">
         <img src="assets/projetos/mfc/Nova homepage MFC Estruturas Comerciais.jpg" alt="DoWhile 2021 Virtual Badge" />
         <div class="projetos-info">
           <h3>MFC Estruturas Comerciais</h3>
           <div class="projetos-tecnologias">WordPress | HTML | CSS | JS | 🔗</div>
         </div>
       </div>
-      <div class="projetos-card">
-        <img src="assets/projetos/rope minas/ropeminas.com_.png" alt="DoWhile 2021 Virtual Badge" />
+      
+<!-- Modal do projeto Portal de Emendas MG -->
+<div id="mfc-estruturas" class="modal">
+  <div class="modal-content">
+    <span onclick="closeModal('mfc-estruturas')" class="close-btn">&times;</span>
+    <div class="modal-header">
+      <!-- Carrossel de Imagens -->
+      <div class="carousel-container">
+        <button class="carousel-btn prev-btn">&#10094;</button>
+        <div class="carousel-images">
+          <img class="carousel-image" src="assets/projetos/mfc/Nova homepage MFC Estruturas Comerciais.jpg" alt="MFC Estruturas Comerciais" />
+          <img class="carousel-image" src="assets/projetos/mfc/site-mfc-2.png" alt="MFC Estruturas Comerciais 2" />
+          <img class="carousel-image" src="assets/projetos/mfc/site-mfc-mobile.png" alt="MFC Estruturas Comerciais 3" />
+        </div>
+        <button class="carousel-btn next-btn">&#10095;</button>
+      </div>
+      
+      <!-- Texto do Modal -->
+      <div class="modal-text">
+        <h3>MFC Estruturas Comerciais</h3>
+        <p>Projeto de redesign completo do site da MFC Estruturas Comerciais: Transformamos um site com visual desatualizado em uma plataforma moderna e profissional, elevando a credibilidade da marca e melhorando a experiência dos visitantes. As imagens mostram a impressionante evolução antes e depois do redesign.</p>
+            <div class="modal-footer">
+          <a target="_blank" href="https://www.mfcestruturascomerciais.com.br" class="btn">Acessar projeto</a>
+          <!-- <a href="https://github.com/seu-repositorio" class="btn">Acessar repositório</a> -->
+        </div>
+      </div>
+  </div>  
+        </div>
+      </div>
+      <div class="projetos-card" onclick="openModal('rope-minas')">
+        <img src="assets/projetos/rope minas/ropeminas.com_.png" alt="ROPE Minas" />
         <div class="projetos-info">
           <h3>ROPE Minas</h3>
           <div class="projetos-tecnologias">WordPress | HTML | CSS | JS | 🔗</div>
         </div>
       </div>
-      <div class="projetos-card">
-        <img src="assets/projetos/apice/site-apice-1.png" alt="DoWhile 2021 Virtual Badge" />
+      
+    <!-- Modal do projeto ROPE Minas -->
+    <div id="rope-minas" class="modal">
+      <div class="modal-content">
+        <span onclick="closeModal('rope-minas')" class="close-btn">&times;</span>
+        <div class="modal-header">
+      <!-- Carrossel de Imagens -->
+      <div class="carousel-container">
+        <button class="carousel-btn prev-btn">&#10094;</button>
+        <div class="carousel-images">
+          <img class="carousel-image" src="assets/projetos/rope minas/ropeminas1.jpg" alt="ROPE Minas" />
+          <!-- Adicione mais imagens do projeto conforme necessário -->
+          <img class="carousel-image" src="assets/projetos/rope minas/ropeminas2.jpg" alt="ROPE Minas 2" />
+          <img class="carousel-image" src="assets/projetos/rope minas/ropeminas3.jpg" alt="ROPE Minas 3" />
+          <img class="carousel-image" src="assets/projetos/rope minas/ropeminas4.jpg" alt="ROPE Minas 4" />
+        </div>
+        <button class="carousel-btn next-btn">&#10095;</button>
+      </div>
+      
+      <!-- Texto do Modal -->
+      <div class="modal-text">
+        <h3>ROPE Minas</h3>
+        <p>Site institucional da ROPE Minas desenvolvido em WordPress. O projeto incluiu a criação de layout personalizado, integração de formulários de contato e otimização para dispositivos móveis.</p>
+        <div class="modal-footer">
+          <a href="https://ropeminas.com" target="_blank" class="btn">Acessar projeto</a>
+          <!-- <a href="https://github.com/seu-repositorio" class="btn">Acessar repositório</a> -->
+        </div>
+      </div>
+        </div>  
+      </div>
+    </div>
+      <div class="projetos-card" onclick="openModal('apice-cursos')">
+        <img src="assets/projetos/apice/site-apice-1.png" alt="Ápice Cursos" />
         <div class="projetos-info">
           <h3>Ápice Cursos</h3>
           <div class="projetos-tecnologias">HTML | CSS | JS | 🔗</div>
         </div>
       </div>
-      <div class="projetos-card">
-        <img src="assets/projetos/SIT/www.sit.mg.gov.br_.png" alt="DoWhile 2021 Virtual Badge" />
+      
+      <!-- Modal do projeto Ápice Cursos -->
+      <div id="apice-cursos" class="modal">
+        <div class="modal-content">
+          <span onclick="closeModal('apice-cursos')" class="close-btn">&times;</span>
+          <div class="modal-header">
+        <!-- Carrossel de Imagens -->
+        <div class="carousel-container">
+          <button class="carousel-btn prev-btn">&#10094;</button>
+          <div class="carousel-images">
+            <img class="carousel-image" src="assets/projetos/apice/site-apice-1.png" alt="Ápice Cursos" />
+            <img class="carousel-image" src="assets/projetos/apice/site-apice-2.png" alt="Ápice Cursos 2" />
+            <img class="carousel-image" src="assets/projetos/apice/site-apice-3.png" alt="Ápice Cursos 3" />
+          </div>
+          <button class="carousel-btn next-btn">&#10095;</button>
+        </div>
+        
+        <!-- Texto do Modal -->
+        <div class="modal-text">
+          <h3>Ápice Cursos</h3>
+          <p>Site desenvolvido para a Ápice Cursos, oferecendo uma plataforma moderna e intuitiva para apresentação de cursos e treinamentos. O projeto foi implementado com foco em usabilidade e design responsivo.</p>
+          <div class="modal-footer">
+            <a href="https://apice-cursos.vercel.app/ target="_blank" class="btn">Acessar projeto</a>
+            <!-- <a href="https://github.com/seu-repositorio" class="btn">Acessar repositório</a> -->
+          </div>
+        </div>
+          </div>  
+        </div>
+      </div>
+      <div class="projetos-card" onclick="openModal('sit-sistema')">
+        <img src="assets/projetos/SIT/www.sit.mg.gov.br_.png" alt="Sistema de Informação de Tramitação" />
         <div class="projetos-info">
           <h3>Sistema de Informação de Tramitação de Instrumentos(SIT)</h3>
           <div class="projetos-tecnologias">PHP | Laravel | JS | 🔗</div>
         </div>
       </div>
-      <div class="projetos-card">
-        <img src="assets/projetos/clickapp/clickapp3.jpg" alt="DoWhile 2021 Virtual Badge" />
+      
+      <!-- Modal do projeto SIT -->
+      <div id="sit-sistema" class="modal">
+        <div class="modal-content">
+          <span onclick="closeModal('sit-sistema')" class="close-btn">&times;</span>
+          <div class="modal-header">
+        <!-- Carrossel de Imagens -->
+        <div class="carousel-container">
+          <button class="carousel-btn prev-btn">&#10094;</button>
+          <div class="carousel-images">
+            <img class="carousel-image" src="assets/projetos/SIT/www.sit.mg.gov.br_.png" alt="SIT Sistema" />
+            <!-- Adicione mais imagens do SIT se disponíveis -->
+          </div>
+          <button class="carousel-btn next-btn">&#10095;</button>
+        </div>
+        
+        <!-- Texto do Modal -->
+        <div class="modal-text">
+          <h3>Sistema de Informação de Tramitação (SIT)</h3>
+          <p>O SIT é um sistema completo desenvolvido para o Governo de Minas Gerais para gerenciar e acompanhar a tramitação de documentos e instrumentos oficiais. Desenvolvido com Laravel e PHP, oferece funcionalidades robustas de gestão, busca e rastreamento de processos.</p>
+          <div class="modal-footer">
+            <a href="https://www.sit.mg.gov.br" target="_blank" class="btn">Acessar projeto</a>
+            <!-- <a href="https://github.com/seu-repositorio" class="btn">Acessar repositório</a> -->
+          </div>
+        </div>
+          </div>  
+        </div>
+      </div>
+
+      <div class="projetos-card" onclick="openModal('clickapp')">
+        <img src="assets/projetos/clickapp/clickapp3.jpg" alt="Sistema de pedidos para restaurantes" />
         <div class="projetos-info">
           <h3>Sistema de pedidos para restaurantes</h3>
           <div class="projetos-tecnologias">NodeJS | JS | EJS | MySQL | 🔗</div>
         </div>
       </div>
-      <div class="projetos-card">
-        <img src="assets/projetos/sidebar/sidebar_aberta.png" alt="DoWhile 2021 Virtual Badge" />
+      
+      <!-- Modal do projeto Sistema de pedidos -->
+      <div id="clickapp" class="modal">
+        <div class="modal-content">
+          <span onclick="closeModal('clickapp')" class="close-btn">&times;</span>
+          <div class="modal-header">
+        <!-- Carrossel de Imagens -->
+        <div class="carousel-container">
+          <button class="carousel-btn prev-btn">&#10094;</button>
+          <div class="carousel-images">
+            <img class="carousel-image" src="assets/projetos/clickapp/clickapp3.jpg" alt="Sistema de pedidos 1" />
+            <img class="carousel-image" src="assets/projetos/clickapp/clickapp2.jpg" alt="Sistema de pedidos 2" />
+            <img class="carousel-image" src="assets/projetos/clickapp/clickapp3.jpg" alt="Sistema de pedidos 3" />
+          </div>
+          <button class="carousel-btn next-btn">&#10095;</button>
+        </div>
+        
+        <!-- Texto do Modal -->
+        <div class="modal-text">
+          <h3>Sistema de pedidos para restaurantes</h3>
+          <p>Sistema completo para gerenciamento de pedidos em restaurantes, desenvolvido com Node.js e MySQL. Permite cadastro de produtos, gerenciamento de mesas, controle de pedidos em tempo real e integração com cozinha.</p>
+          <div class="modal-footer">
+            <a href="#" target="_blank" class="btn">Acessar projeto</a>
+            <!-- <a href="https://github.com/seu-repositorio" class="btn">Acessar repositório</a> -->
+          </div>
+        </div>
+          </div>  
+        </div>
+      </div>
+      
+      <div class="projetos-card" onclick="openModal('sidebar-projeto')">
+        <img src="assets/projetos/sidebar/sidebar_aberta.png" alt="Sidebar Project" />
         <div class="projetos-info">
           <h3>Sidebar</h3>
           <div class="projetos-tecnologias">HTML | CSS | JS | 🔗</div>
         </div>
       </div>
-      <div class="projetos-card">
-        <img src="assets/projetos/dev_finance/preview.png" alt="DoWhile 2021 Virtual Badge" />
+      
+      <!-- Modal do projeto Sidebar -->
+      <div id="sidebar-projeto" class="modal">
+        <div class="modal-content">
+          <span onclick="closeModal('sidebar-projeto')" class="close-btn">&times;</span>
+          <div class="modal-header">
+        <!-- Carrossel de Imagens -->
+        <div class="carousel-container">
+          <button class="carousel-btn prev-btn">&#10094;</button>
+          <div class="carousel-images">
+            <img class="carousel-image" src="assets/projetos/sidebar/sidebar_aberta.png" alt="Sidebar Aberta" />
+            <!-- <img class="carousel-image" src="assets/projetos/sidebar/sidebar_fechada.png" alt="Sidebar Fechada" /> -->
+            <!-- Adicione mais imagens do projeto se disponíveis -->
+          </div>
+          <button class="carousel-btn next-btn">&#10095;</button>
+        </div>
+        
+        <!-- Texto do Modal -->
+        <div class="modal-text">
+          <h3>Sidebar</h3>
+          <p>Componente de sidebar responsivo desenvolvido com HTML, CSS e JavaScript. Oferece navegação intuitiva com animações suaves de abertura e fechamento, adaptando-se perfeitamente a diferentes tamanhos de tela.</p>
+          <div class="modal-footer">
+            <a href="https://matheusbalbe.github.io/sidebar/" target="_blank" class="btn">Acessar projeto</a>
+            <!-- <a href="https://github.com/seu-repositorio" class="btn">Acessar repositório</a> -->
+          </div>
+        </div>
+          </div>  
+        </div>
+      </div>
+      <div class="projetos-card" onclick="openModal('dev-finance')">
+        <img src="assets/projetos/dev_finance/preview.png" alt="Dev$Finance" />
         <div class="projetos-info">
           <h3>Dev$Finance</h3>
           <div class="projetos-tecnologias">HTML | CSS | JS | 🔗</div>
         </div>
       </div>
-      <div class="projetos-card">
-        <img src="assets/projetos/rocketflix/rocketflix.png" alt="DoWhile 2021 Virtual Badge" />
+
+      <!-- Modal do projeto Dev$Finance -->
+      <div id="dev-finance" class="modal">
+        <div class="modal-content">
+          <span onclick="closeModal('dev-finance')" class="close-btn">&times;</span>
+          <div class="modal-header">
+            <!-- Carrossel de Imagens -->
+            <div class="carousel-container">
+              <button class="carousel-btn prev-btn">&#10094;</button>
+              <div class="carousel-images">
+                <img class="carousel-image" src="assets/projetos/dev_finance/preview.png" alt="Dev$Finance" />
+                <!-- Adicione mais imagens do projeto se disponíveis -->
+              </div>
+              <button class="carousel-btn next-btn">&#10095;</button>
+            </div>
+            
+            <!-- Texto do Modal -->
+            <div class="modal-text">
+              <h3>Dev$Finance</h3>
+              <p>Aplicação web para controle financeiro pessoal que permite registrar entradas e saídas, calcular balanço total e visualizar histórico de transações. Desenvolvido com HTML, CSS e JavaScript puro.</p>
+              <div class="modal-footer">
+                <a href="https://matheusbalbe.github.io/sistema-financeiro/" target="_blank" class="btn">Acessar projeto</a>
+                <!-- <a href="https://github.com/seu-repositorio" class="btn">Acessar repositório</a> -->
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+      <div class="projetos-card" onclick="openModal('rocketflix-projeto')">
+        <img src="assets/projetos/rocketflix/rocketflix.png" alt="Rocketflix" />
         <div class="projetos-info">
           <h3>Rocketflix</h3>
           <div class="projetos-tecnologias">HTML | CSS | JS | 🔗</div>
+        </div>
+      </div>
+      
+      <!-- Modal do projeto Rocketflix -->
+      <div id="rocketflix-projeto" class="modal">
+        <div class="modal-content">
+          <span onclick="closeModal('rocketflix-projeto')" class="close-btn">&times;</span>
+          <div class="modal-header">
+        <!-- Carrossel de Imagens -->
+        <div class="carousel-container">
+          <button class="carousel-btn prev-btn">&#10094;</button>
+          <div class="carousel-images">
+            <img class="carousel-image" src="assets/projetos/rocketflix/rocketflix.png" alt="Rocketflix" />
+            <!-- Adicione mais imagens do projeto se disponíveis -->
+          </div>
+          <button class="carousel-btn next-btn">&#10095;</button>
+        </div>
+        
+        <!-- Texto do Modal -->
+        <div class="modal-text">
+          <h3>Rocketflix</h3>
+          <p>Aplicação web para descoberta de filmes que utiliza a API do TMDB para sugerir filmes aleatórios aos usuários. Interface clean e responsiva desenvolvida com HTML, CSS e JavaScript.</p>
+          <div class="modal-footer">
+            <a href="https://matheusbalbe.github.io/rocketflix/" target="_blank" class="btn">Acessar projeto</a>
+            <!-- <a href="https://github.com/seu-repositorio" class="btn">Acessar repositório</a> -->
+          </div>
+        </div>
+          </div>  
         </div>
       </div>
     </div>

@@ -47,22 +47,22 @@ toggle.addEventListener("click", () => {
 //   }
 // });
 
-const text = "Matheus Balbe";
-const heroH1name = document.getElementById("heroH1name");
-let index = 0;
+// const text = "Matheus Balbe";
+// const heroH1name = document.getElementById("heroH1name");
+// let index = 0;
 
-function typeEffect() {
-  if (index <= text.length) {
-    heroH1name.textContent =
-      text.substring(0, index) + (index < text.length ? "|" : ""); // Add the blinking cursor
-    index++;
-    setTimeout(typeEffect, 100); // Adjust speed by changing the timeout value
-  } else {
-    heroH1name.textContent = text; // Remove the cursor after typing is complete
-  }
-}
+// function typeEffect() {
+//   if (index <= text.length) {
+//     heroH1name.textContent =
+//       text.substring(0, index) + (index < text.length ? "|" : ""); // Add the blinking cursor
+//     index++;
+//     setTimeout(typeEffect, 100); // Adjust speed by changing the timeout value
+//   } else {
+//     heroH1name.textContent = text; // Remove the cursor after typing is complete
+//   }
+// }
 
-typeEffect();
+// typeEffect();
 
 // seção de projetos
 
@@ -72,15 +72,15 @@ const modals = document.querySelectorAll(".modal");
 const closeButtons = document.querySelectorAll(".close-btn");
 
 // Função para abrir o modal
-// Função para abrir o modal
-function openModal(modalId) {
-  document.getElementById(modalId).style.display = "block";
-}
+// // Função para abrir o modal
+// function openModal(modalId) {
+//   document.getElementById(modalId).style.display = "block";
+// }
 
-// Função para fechar o modal
-function closeModal(modalId) {
-  document.getElementById(modalId).style.display = "none";
-}
+// // Função para fechar o modal
+// function closeModal(modalId) {
+//   document.getElementById(modalId).style.display = "none";
+// }
 
 // Fecha o modal quando o fundo escuro é clicado
 window.onclick = function(event) {
@@ -92,5 +92,61 @@ window.onclick = function(event) {
   });
 };
 
+// Função para inicializar todos os carrosséis nos modais
+function initCarousels() {
+  const modals = document.querySelectorAll('.modal');
+  
+  modals.forEach(modal => {
+    const prevBtn = modal.querySelector('.prev-btn');
+    const nextBtn = modal.querySelector('.next-btn');
+    const images = modal.querySelectorAll('.carousel-image');
+    let currentIndex = 0;
+    
+    // Ocultar todas as imagens exceto a primeira
+    for (let i = 1; i < images.length; i++) {
+      images[i].style.display = 'none';
+    }
+    
+    // Adicionar event listeners para os botões
+    if (prevBtn && nextBtn && images.length > 0) {
+      prevBtn.addEventListener('click', () => {
+        images[currentIndex].style.display = 'none';
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        images[currentIndex].style.display = 'block';
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        images[currentIndex].style.display = 'none';
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].style.display = 'block';
+      });
+    }
+  });
+}
 
+// Funções para abrir e fechar modais
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = 'flex';
+  // Inicializar carrossel quando o modal for aberto
+  initCarousels();
+}
 
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = 'none';
+}
+
+// Menu toggle para mobile
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+  }
+  
+  // Inicializar carrosséis quando a página carregar
+  initCarousels();
+});
