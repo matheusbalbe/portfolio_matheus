@@ -124,6 +124,12 @@ function initCarousels() {
         images[currentIndex].style.display = 'block';
       });
       
+      nextBtn.addEventListener("click", () => {
+        images[currentIndex].style.display = "none";
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].style.display = "block";
+      });
+      
 // Funções para abrir e fechar modais
 function openModal(modalId) {
   const modal = document.getElementById(modalId);
