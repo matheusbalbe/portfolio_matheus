@@ -92,11 +92,20 @@ window.onclick = function(event) {
   });
 };
 
+// Variável para rastrear inicialização dos carrosséis
+const initializedCarousels = new Set();
+
 // Função para inicializar todos os carrosséis nos modais
 function initCarousels() {
   const modals = document.querySelectorAll('.modal');
   
   modals.forEach(modal => {
+    const modalId = modal.id;
+    // Verificar se esse carrossel já foi inicializado
+    if (initializedCarousels.has(modalId)) {
+      return;
+    }
+    
     const prevBtn = modal.querySelector('.prev-btn');
     const nextBtn = modal.querySelector('.next-btn');
     const images = modal.querySelectorAll('.carousel-image');
@@ -115,11 +124,25 @@ function initCarousels() {
         images[currentIndex].style.display = 'block';
       });
       
-      nextBtn.addEventListener('click', () => {
-        images[currentIndex].style.display = 'none';
-        currentIndex = (currentIndex + 1) % images.length;
-        images[currentIndex].style.display = 'block';
-      });
+// Funções para abrir e fechar modais
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.style.display = 'flex';
+  
+  // Garantir que o carrossel seja exibido corretamente
+  const images = modal.querySelectorAll('.carousel-image');
+  if (images.length > 0) {
+    // Esconder todas as imagens
+    images.forEach(img => img.style.display = 'none');
+    // Mostrar a primeira imagem
+    images[0].style.display = 'block';
+  }
+  
+  // Inicializar carrossel quando o modal for aberto
+  initCarousels();
+}
+      // Marcar este carrossel como inicializado
+      initializedCarousels.add(modalId);
     }
   });
 }
